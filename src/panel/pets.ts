@@ -15,6 +15,9 @@ import { Zappy } from './pets/zappy';
 import { Rat } from './pets/rat';
 import { Turtle } from './pets/turtle';
 import { IPetType } from './states';
+import { StickBug } from './pets/stickbug';
+import { Cbat } from './pets/cbat';
+import { Chud } from './pets/chud';
 
 export class PetElement {
     el: HTMLImageElement;
@@ -204,6 +207,12 @@ export function createPet(
             return new Rat(...standardPetArguments, PetSpeed.normal);
         case PetType.turtle:
             return new Turtle(...standardPetArguments, PetSpeed.verySlow);
+        case PetType.stickbug:
+            return new StickBug(...standardPetArguments, PetSpeed.normal);
+        case PetType.cbat:
+            return new Cbat(...standardPetArguments, PetSpeed.normal);
+        case PetType.chud:
+            return new Chud(...standardPetArguments, PetSpeed.normal);
         default:
             throw new InvalidPetException("Pet type doesn't exist");
     }
@@ -215,6 +224,8 @@ export function availableColors(petType: PetType): PetColor[] {
             return Cat.possibleColors;
         case PetType.chicken:
             return Chicken.possibleColors;
+        case PetType.chud:
+            return Chud.possibleColors;
         case PetType.dog:
             return Dog.possibleColors;
         case PetType.fox:
@@ -241,6 +252,10 @@ export function availableColors(petType: PetType): PetColor[] {
             return Rat.possibleColors;
         case PetType.turtle:
             return Turtle.possibleColors;
+        case PetType.stickbug:
+            return StickBug.possibleColors;
+        case PetType.cbat:
+            return Cbat.possibleColors;
         default:
             throw new InvalidPetException("Pet type doesn't exist");
     }

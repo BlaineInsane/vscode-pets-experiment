@@ -93,6 +93,19 @@ const pets: { [key: string]: { colors: string[]; states: string[] } } = {
         colors: ['green', 'orange'],
         states: ['idle', 'run', 'walk', 'lie', 'with_ball'],
     },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    'stick-bug': {
+        colors: ['green'],
+        states: ['idle', 'run', 'swipe', 'walk', 'walk_fast'],
+    },
+    cbat: {
+        colors: ['white'],
+        states: ['idle', 'run', 'walk'],
+    },
+    chud: {
+        colors: ['white'],
+        states: ['idle', 'run', 'walk'],
+    },
 };
 
 function checkGifFilenames(folder: string) {
